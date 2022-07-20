@@ -1,6 +1,8 @@
 <html>
 <head>
-<title>if¹®</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ifë¬¸</title>
 </head>
 <body>
 <div style="width:80vw"><canvas id="mychart"></canvas></div>
@@ -10,7 +12,7 @@ var num = Math.floor(Math.random() * 100)
 var array = []
 var str = []
 var c = []
-str1 = "0~99±îÁöÀÇ ¹øÈ£¸¦ ÀÔ·ÂÇÏ½Ã¿À"
+str1 = "0~99ê¹Œì§€ì˜ ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì‹œì˜¤"
 i=1
 while (true) 
 {
@@ -19,17 +21,17 @@ while (true)
   if (num == val) 
   {
     document.write("congratulation<br/>")
-    document.write(i + "¹ø¸¸¿¡ Á¤´äÀÔ´Ï´Ù<br/>")
+    document.write(i + "ë²ˆë§Œì— ì •ë‹µì…ë‹ˆë‹¤<br/>")
     document.write("what you input : " + array.toString())
     break
   }
   else if (val < num)
   {
-    str1 = "´õ ³ôÀº °ªÀ» ÀÔ·ÂÇÏ½Ã¿À"
+    str1 = "ë” ë†’ì€ ê°’ì„ ì…ë ¥í•˜ì‹œì˜¤"
   }
   else if (val > num)
   {
-    str1 = "´õ ³·Àº °ªÀ» ÀÔ·ÂÇÏ½Ã¿À"
+    str1 = "ë” ë‚®ì€ ê°’ì„ ì…ë ¥í•˜ì‹œì˜¤"
   }
   i++
   array.push(val)
@@ -37,9 +39,9 @@ while (true)
   c.push(num)
 }
 
-datainfo = { // datainfo¾È¿¡ labels¿Í datasets°¡ ÀÖÀ½
+datainfo = { // datainfoì•ˆì— labelsì™€ datasetsê°€ ìˆìŒ
   labels : str,
-  datasets : [{ // datasets¾È¿¡ °´Ã¼°¡ ÀÖÀ½
+  datasets : [{ // datasetsì•ˆì— ê°ì²´ê°€ ìˆìŒ
     label : 'NumberGuess',
     backgroundColor : ['gray', 'red'],
     borderColor : 'blue',
