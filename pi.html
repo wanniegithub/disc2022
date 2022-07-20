@@ -1,0 +1,59 @@
+<html><head>
+<title>1910137 이정완 1차 과제</title>
+</head><body>
+<h1>PI Calculation by 이정완</h1>
+<div style="width:80vw"><canvas id="myChart"></canvas></div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+var kk = 0
+var nt = []
+var pt = []
+var ans_pi = []
+for ( i=0 ; i<100000001 ; i++ ) {
+  x = Math.random()
+  y = Math.random()
+  if ( (x*x+y*y) < 1 ) kk++
+  if ( i == 100 ) padd(i,kk)
+  if ( i == 1000 ) padd(i,kk)
+  if ( i == 10000 ) padd(i,kk)
+  if ( i == 100000 ) padd(i,kk)
+  if ( i == 1000000 ) padd(i,kk)
+  if ( i == 10000000 ) padd(i,kk)
+  if ( i == 20000000 ) padd(i,kk)
+  if ( i == 30000000 ) padd(i,kk)
+  if ( i == 40000000 ) padd(i,kk)
+  if ( i == 50000000 ) padd(i,kk)
+  if ( i == 60000000 ) padd(i,kk)
+  if ( i == 70000000 ) padd(i,kk)
+  if ( i == 80000000 ) padd(i,kk)
+  if ( i == 90000000 ) padd(i,kk)
+  if ( i == 100000000 ) padd(i,kk)
+}
+function padd(t,k) {
+  alert(t + ":" + k + ":" + 4*k/t)
+  nt.push(t); pt.push(4*k/t); ans_pi.push(3.141592);
+}
+datainfo = {
+  labels : nt,
+  datasets : [{ 
+    label : 'pi_Guess',
+    backgroundColor : ['gray', 'red'],
+    borderColor : 'blue',
+    data : pt,
+    tension : 0.5
+    },
+    {
+    label : 'Answer(pi)',
+    backgroundColor : ['gray', 'red'],
+    borderColor : 'red',
+    data : ans_pi,
+    tension : 0.5
+    }]
+}
+const config = {
+  type : 'line',
+  data : datainfo
+ }
+mychart = new Chart(document.getElementById("myChart"), config)
+</script>
+</body></html>
