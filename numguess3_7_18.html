@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>if문</title>
+</head>
+<body>
+<div style="width:80vw"><canvas id="mychart"></canvas></div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+var num = Math.floor(Math.random() * 100)
+var array = []
+var str = []
+var c = []
+str1 = "0~99까지의 번호를 입력하시오"
+i=1
+while (true) 
+{
+  val = prompt(str1 + "\n" + "hint : " + num)
+
+  if (num == val) 
+  {
+    document.write("congratulation<br/>")
+    document.write(i + "번만에 정답입니다<br/>")
+    document.write("what you input : " + array.toString())
+    break
+  }
+  else if (val < num)
+  {
+    str1 = "더 높은 값을 입력하시오"
+  }
+  else if (val > num)
+  {
+    str1 = "더 낮은 값을 입력하시오"
+  }
+  i++
+  array.push(val)
+  str.push(i)
+  c.push(num)
+}
+
+datainfo = { // datainfo안에 labels와 datasets가 있음
+  labels : str,
+  datasets : [{ // datasets안에 객체가 있음
+    label : 'NumberGuess',
+    backgroundColor : ['gray', 'red'],
+    borderColor : 'blue',
+    data : array,
+    tension : 0.5
+    },
+    {
+    label : 'Answer',
+    backgroundColor : ['gray', 'red'],
+    borderColor : 'blue',
+    data : c,
+    tension : 0.5
+    }]
+}
+const config = {
+  type : 'line',
+  data : datainfo
+ }
+mychart = new Chart(document.getElementById("mychart"), config)
+</script>
+</body>
+</html>
