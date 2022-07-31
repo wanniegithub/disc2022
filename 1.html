@@ -1,0 +1,21 @@
+<html>
+<head></head>
+<body>
+<h1>내용</h1>
+<script>
+  num = 10;
+  const digit = [1, 0.1, 0.01, 0.01, 0.001, 0.0001, 0.00001, 0.000001, 0.0000001, 0.00000001];
+  a = 0;
+  value = 2;
+  num = value + a;
+  cnt = 0;
+  while (Math.abs(10 - num*num*num)>0.00000001)
+  {
+    a = Math.random();
+    num = value + a;
+    cnt++;
+  }
+  document.getElementsByTagName('h1').innerHTML = "시도횟수 : " + cnt + "\n값 : " + a;
+</script>
+</body>
+</html>
