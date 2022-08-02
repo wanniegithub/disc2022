@@ -1,21 +1,58 @@
-<html>
-<head></head>
-<body>
-<h1>≥ªøÎ</h1>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style> div { position: relative; width:80vw; margin: auto } </style>
+</head><body>
+<canvas id="myChart"></canvas></div>
 <script>
-  num = 10;
-  const digit = [1, 0.1, 0.01, 0.01, 0.001, 0.0001, 0.00001, 0.000001, 0.0000001, 0.00000001];
-  a = 0;
-  value = 2;
-  num = value + a;
-  cnt = 0;
-  while (Math.abs(10 - num*num*num)>0.00000001)
-  {
-    a = Math.random();
-    num = value + a;
-    cnt++;
+window.onload = function() {
+  k = 0
+  count = [0]
+  cbrt = []
+  answer = []
+  high = 3
+  low = 2
+  delta = 0.00000001;
+  while ( true )  {
+  cbrt[k] = (high + low)/2
+  cbrt3 = cbrt[k]*cbrt[k]*cbrt[k]
+  answer[k] = Math.cbrt(10)
+  if ( Math.abs(cbrt3 - 10) < delta )
+    break;
+  else if ( cbrt3 > 10 )
+    high = cbrt[k];
+  else if ( cbrt3 < 10 )
+    low = cbrt[k];
+  k++
+  count[k] = k
   }
-  document.getElementsByTagName('h1').innerHTML = "Ω√µµ»Ωºˆ : " + cnt + "\n∞™ : " + a;
+  document.querySelector('h1').innerHTML = k + "Î≤àÏß∏ Í∞í : " + cbrt;
+  datainfo = {
+  labels : count,
+  datasets : [{
+    label : 'CBRT210 by Trial',
+    backgroundColor : ['gray', 'red'],
+    borderColor : 'blue',
+    data : cbrt,
+    tension : 0.5
+   },
+   {
+    label : 'CBRT10(2.1544346902519464)',
+    backgroundColor : ['gray', 'green'],
+    borderColor : 'red',
+    data : answer,
+    tension : 0.5
+   },
+   ]
+}
+const config = {
+  type : 'line',
+  data : datainfo
+}
+mychart = new Chart(document.getElementById("myChart"), config)
+}
 </script>
-</body>
-</html>
+</head><body>
+<h1>CBRT10 Calculation by Í≥ºÍ∏∞Ïù∏</h1>
+</body></html>
