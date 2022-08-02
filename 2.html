@@ -1,11 +1,16 @@
-
-<html>
-<head></head>
-<body>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style> div { position: relative; width:80vw; margin: auto } </style>
+</head><body>
+<canvas id="myChart"></canvas></div>
 <script>
+window.onload = function()  {
 mydata = [1,2,3,4,5];
+count = []
 for (i=1; i<=100; i++)  {
-  num = Math.round(100*Math.random());
+  num = Math.round(100*Math.random())+1;
   mydata.push(num);
 }
 sum = 0;
@@ -14,11 +19,34 @@ for (i=0; i<105; i++) {
 }
 mydata.push(mydata.length);
 mydata.push(sum);
-avg = sum/mydata.length;
-mydata.push(sum);
-alert("°¹¼ö : " + mydata.length);
-alert("ÃÑÇÕ : " + sum);
-alert("Æò±Õ : " + avg);
+avg = sum / mydata.length;
+mydata.push(avg);
+alert("ê°¯ìˆ˜ : " + mydata.length);
+alert("ì´í•© : " + sum);
+alert("í‰ê·  : " + avg);
+for (i=0; i<mydata.length; i++) {
+  document.write(mydata[i] + "<br/>");
+  count[i] = i;
+  }
+
+  datainfo = {
+  labels : count,
+  datasets : [{
+    label : 'mydata',
+    backgroundColor : ['gray', 'red'],
+    borderColor : 'blue',
+    data : mydata,
+    tension : 0.5
+   }]
+}
+const config = {
+  type : 'line',
+  data : datainfo
+}
+mychart = new Chart(document.getElementById("myChart"), config)
+}
 </script>
+</head>
+<body>
 </body>
 </html>
