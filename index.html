@@ -1,11 +1,167 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
-  <body>
-<h1>수원 관광코스 안내</h1>
-<a href = "1.html">행궁동 안내</a><br>
-<a href = "2.html">수원화성 안내</a><br>
-<a href = "3.html">인계동 안내</a><br>
-  </body></html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width">
+   <link href="style.css" rel="stylesheet" type="text/css" />
+  <style>
+    .nav {
+      height: 70px;
+      border-bottom: 1px solid black;
+      display: flex;
+      align-items: center;
+    }
+    
+    .nav-right-items {
+      display: flex;
+      margin-left: 10px;
+    }
+
+    .nav-item {
+      margin-left: 10px;
+      font-size: 0.7rem;
+      display: flex;
+    }
+
+    .site-name {
+      font-size: 1.5rem;
+      margin-left: 20px;
+    }
+
+    .title {
+      text-align : center;
+      font-weight: bold;
+    }
+
+    .subtitle {
+      text-align : center;
+      font-weight: bold;
+    }
+
+    .main {
+      width: 800px;
+      margin: 0 auto;
+      margin-top: 60px;
+    }
+    
+    .align {
+      float : left;
+      }
+
+    .price-item {
+      float: left;
+      width: 600px;
+      height: 300px;
+      border: 1px solid black;
+      margin: 50px;
+      border-radius: 1px;
+      text-align: center;
+    }
+
+
+    .price-item-title {
+      font-size: 1.5rem;
+      text-align: center;
+      height: 53px;
+      line-height: 53px;
+    }
+
+    .price-item-button {
+      color: #007bff;
+      background-color: transparent;
+      border-color: #007bff;
+    }
+    
+    .price-item-img1 {
+      background-image: url("./img/img1.jpg");
+      background-position: center;
+      height: 300px;
+      border-radius: 10px;
+    }
+    
+    .price-item-img2 {
+      background-image: url("./img/img2.jpg");
+      background-position: center;
+      height: 300px;
+      border-radius: 10px;
+    }
+    
+    .price-item-img3 {
+      background-image: url("./img/img3.jpg");
+      background-position: center;
+      height: 300px;
+      border-radius: 10px;
+    }
+    
+
+    
+
+    
+      
+  </style>
+</head>
+
+<body>
+ <div class="nav">
+   <div class = "site-name">
+     이정완
+   <div class="nav-right-items">
+    <div class="nav-item">수원화성</div>
+    <div class="nav-item">행궁동</div>
+    <div class="nav-item">광교 호수공원</div>  
+ </div>
+ </div>
+ </div>
+ <div class = "main">
+   <div class = "title">
+     관광지 소개
+   </div>
+   <div class = "subtitle" >
+     행복이 넘치는 도시 : 수원에 오신 것을 환영합니다
+   </div>
+   <div class = "align">
+    <div class = "price-item">
+      <div class="price-item-title">
+      수원화성
+      </div>
+      <div class="price-item-img1"></div>
+      <button class="price-item-button" onclick="window.open('https://www.suwon.go.kr/web/visitsuwon/hs01/hs01-01/pages.do');">
+      Click                        
+      </button>
+    </div>
+    
+    
+    <div class = "price-item">
+      <div class="price-item-title">
+      행궁동
+      </div>
+      <div class="price-item-img2"></div>
+      <button class="price-item-button" onclick="window.open('https://paldal.suwon.go.kr/submain_view.asp?TopID=sub20&menuid=sub200210');">
+      Click                       
+      </button>
+    </div>
+    
+    <div class = "price-item">
+      <div class="price-item-title">
+      광교 호수공원      
+      </div>
+      <div class="price-item-img3"></div>
+      <button class="price-item-button" onclick="window.open('http://www.gglakepark.or.kr/');">
+      Click                        
+      </button>
+    </div>
+    </div>
+  </div>
+   
+ </div>
+ 
+ 
+ <script>
+ btn = document.querySelector('button');
+ btn.addEventListener('click', function() { 
+ </script>
+
+</body>
+
+</html>
