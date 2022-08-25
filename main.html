@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width">
+  <bgsound src="bgm.mp3" loop = "3">
+   <link href="style.css" rel="stylesheet" type="text/css" />
+  <style>
+    .nav {
+      height: 70px;
+      border-bottom: 1px solid black;
+      display: flex;
+      align-items: center;
+    }
+    
+    .nav-right-items {
+      display: flex;
+      margin-left: 10px;
+    }
+
+    .nav-item {
+      margin-left: 10px;
+      font-size: 0.7rem;
+      display: flex;
+    }
+
+    .site-name {
+      font-size: 1.5rem;
+      margin-left: 20px;
+    }
+
+    .title {
+      text-align : center;
+      font-weight: bold;
+    }
+
+    .subtitle {
+      text-align : center;
+      font-weight: bold;
+    }
+
+    .main {
+      width: 800px;
+      margin: 0 auto;
+      margin-top: 60px;
+    }
+    
+    .align {
+      float : left;
+      }
+
+    .price-item {
+      float: left;
+      width: 600px;
+      height: 300px;
+      border: 1px solid black;
+      margin: 50px;
+      border-radius: 1px;
+      text-align: center;
+    }
+
+
+    .price-item-title {
+      font-size: 1.5rem;
+      text-align: center;
+      height: 53px;
+      line-height: 53px;
+    }
+
+    .price-item-button {
+      color: #007bff;
+      background-color: transparent;
+      border-color: #007bff;
+    }
+    
+    .price-item-img1 {
+      background-image: url("./img/img1.jpg");
+      background-position: center;
+      height: 300px;
+      border-radius: 10px;
+    }
+    
+    .price-item-img2 {
+      background-image: url("./img/img2.jpg");
+      background-position: center;
+      height: 300px;
+      border-radius: 10px;
+    }
+    
+    .price-item-img3 {
+      background-image: url("./img/img3.jpg");
+      background-position: center;
+      height: 300px;
+      border-radius: 10px;
+    }
+    
+    .map {
+    margin : 30px;
+    }
+    
+      
+  </style>
+<audio autoplay controls>
+	<source scr = "./bgm.mp3" type="audio/mp3">
+</audio>
+</head>
+
+<body>
+ <div class="nav">
+   <div class = "site-name">
+     이정완
+   <div class="nav-right-items">
+    <div class="nav-item">수원화성</div>
+    <div class="nav-item">행궁동</div>
+    <div class="nav-item">광교 호수공원</div>  
+ </div>
+ </div>
+ </div>
+ <div class = "main">
+   <div class = "title">
+     관광지 소개
+   </div>
+   <div class = "subtitle" >
+     행복이 넘치는 도시 : 수원에 오신 것을 환영합니다
+   </div>
+   <div class = "align">
+    <div class = "price-item">
+      <div class="price-item-title">
+      수원화성
+      </div>
+      <div class="price-item-img1"></div>
+      <button class="price-item-button" onclick="window.open('https://www.suwon.go.kr/web/visitsuwon/hs01/hs01-01/pages.do');">
+      Click                        
+      </button>
+    </div>
+    
+    <iframe class = "map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3174.3379133369917!2d127.00974921514675!3d37.28712444783843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b5cca0fa82ebb%3A0x1326e46ba3ed1641!2z6rK96riw64-EIOyImOybkO2ZlOyEsQ!5e0!3m2!1sko!2skr!4v1661418008826!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+    <div class = "price-item">
+      <div class="price-item-title">
+      행궁동
+      </div>
+      <div class="price-item-img2"></div>
+      <button class="price-item-button" onclick="window.open('https://paldal.suwon.go.kr/submain_view.asp?TopID=sub20&menuid=sub200210');">
+      Click                       
+      </button>
+    </div>
+    
+    <iframe class = "map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12698.510701731666!2d127.0079736830203!3d37.28025520119878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b4335c2fbe363%3A0x52ac10a4de5dcd4b!2z6rK96riw64-EIOyImOybkOyLnCDtjJTri6zqtawg7ZaJ6raB64-Z!5e0!3m2!1sko!2skr!4v1661418123846!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+    <div class = "price-item">
+      <div class="price-item-title">
+      광교 호수공원      
+      </div>
+      <div class="price-item-img3"></div>
+      <button class="price-item-button" onclick="window.open('http://www.gglakepark.or.kr/');">
+      Click                        
+      </button>
+    </div>
+    <iframe class = "map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3174.509335923748!2d127.0637343151466!3d37.28306074806957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b5b3e6f589601%3A0x159dfe5e577faea4!2z6rSR6rWQ7Zi47IiY6rO17JuQ!5e0!3m2!1sko!2skr!4v1661418148471!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+   
+ </div>
+ 
+ 
+ <script>
+ btn = document.querySelector('button');
+ btn.addEventListener('click', function() { 
+ </script>
+
+</body>
+
+</html>
